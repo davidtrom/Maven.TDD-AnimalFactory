@@ -2,6 +2,7 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
 
 /**
@@ -9,12 +10,42 @@ import rocks.zipcodewilmington.animals.Dog;
  */
 public class DogTest {
     // TODO - Create tests for `new Dog(String name, Date birthDate, Integer id)`
+
+//    @Test
+//    public void setNameTest() {
+//        Dog testDog = new Dog("Fido", null, null);
+//        String expectedName = "Fido";
+//        String actualName = testDog.getName();
+//        Assert.assertEquals(expectedName, actualName);
+
     // TODO - Create tests for `speak`
+
+        @Test
+        public void speakTest()
+        {
+            Dog testDog = new Dog("Fido", null, null);
+            String expected = "bark!";
+            String actual = testDog.speak();
+            Assert.assertEquals(expected, actual);
+        }
+
     // TODO - Create tests for `setBirthDate(Date birthDate)`
-    // TODO - Create tests for `void eat(Food food)`
+
+
+
+
     // TODO - Create tests for `Integer getId()`
+
+
+
     // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
+
+
+
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
+
+
+
     @Test
     public void setNameTest() {
         // Given (a name exists and a dog exists)
