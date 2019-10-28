@@ -2,8 +2,12 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Animal;
 import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
+import rocks.zipcodewilmington.animals.Mammal;
+
+import java.util.Date;
 
 /**
  * @author leon on 4/19/18.
@@ -17,6 +21,7 @@ public class DogTest {
 //        String expectedName = "Fido";
 //        String actualName = testDog.getName();
 //        Assert.assertEquals(expectedName, actualName);
+//    }
 
     // TODO - Create tests for `speak`
 
@@ -31,19 +36,46 @@ public class DogTest {
 
     // TODO - Create tests for `setBirthDate(Date birthDate)`
 
-
+    public void setBirthDateTest()
+    {
+        Dog testDog = new Dog("Fido", new Date(1982, 9, 6), null);
+        Date expected = new Date(1982, 9, 6);
+        Date actual = testDog.getBirthDate();
+        Assert.assertEquals(expected,actual);
+    }
 
 
     // TODO - Create tests for `Integer getId()`
+
+    @Test
+    public void getIdTest ()
+    {
+        Dog testDog = new Dog("Misty", null, 43580);
+        Integer expected = 43580;
+        Integer actual = testDog.getId();
+        Assert.assertEquals(expected,actual);
+    }
 
 
 
     // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
 
+    @Test
+    public void checkAnimalInheritance() {
+        Dog testDog = new Dog("Simon", null, null);
+        Assert.assertEquals(true, testDog instanceof Animal);
+    }
+
 
 
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
 
+    @Test
+    public void checkMammalInheritance()
+    {
+        Dog testDog = new Dog ("Mary", null, null);
+        Assert.assertEquals(true, testDog instanceof Mammal);
+    }
 
 
     @Test
